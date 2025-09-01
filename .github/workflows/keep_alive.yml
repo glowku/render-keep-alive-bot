@@ -12,4 +12,4 @@ jobs:
       - name: Ping Render Service
         run: |
           # Remplacez par l'URL de VOTRE service Render
-          curl -X GET https://drive-proxy-service.onrender.com
+          curl -X GET https://drive-proxy-service.onrender.com/ping
