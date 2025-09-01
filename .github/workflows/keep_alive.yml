@@ -1,0 +1,15 @@
+name: Keep Render Awake
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'  # Toutes les 15 minutes
+  workflow_dispatch:       # Permet un déclenchement manuel
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Render Service
+        run: |
+          # Remplacez par l'URL de VOTRE service Render
+          curl -X GET https://drive-proxy-service.onrender.com
